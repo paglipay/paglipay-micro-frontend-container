@@ -13,11 +13,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "build:dev": "webpack --mode development",
-    "build:start": "cd dist && PORT=8080 npx serve",
-    "start": "webpack serve --open --mode development",
-    "start:live": "webpack serve --open --mode development --live-reload --hot"
+    "start": "serve -s dist",
+    "build": "webpack --config webpack.config.js",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": [
